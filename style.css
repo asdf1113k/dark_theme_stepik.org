@@ -33,21 +33,29 @@
 
 
 
+/*---------------------------------------------*/
+/*------------------------*/
+/* общий background-color */
+/*------------------------*/
+body{
+background-color: #2e2e2e; }
+
+
+
+
+
+
+/*---------------------------------------------*/
 /*------------*/
 /* tags style */
 /*------------*/
-
-body{   
-    background-color: #2e2e2e; }
 
 a       {color: #75dd7b     ;
         transition: color 0.5s; }
 
 a:hover { color: #0095ff    ; }
 
-h1      { color: #fff       ; }
-    
-h2      { color: #fff       ; }
+h1,h2   { color: #fff       ; }
     
 h3      { color: #bcf0b3    ; }
     
@@ -127,9 +135,6 @@ stepik-loader-prerender-wrapper {
 }
 
 @-moz-document url-prefix("https://stepik.org/catalog") {
-
-
-
 .form-checkbox>span::before {
     border-color: white !important;
 }

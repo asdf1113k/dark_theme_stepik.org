@@ -39,13 +39,10 @@
     }
 }
 
-@keyframe text_green__yellow {
-    0% {
-        color: #dd8;
-    }
-    100% {
-        color: #75dd7b;
-    }
+@keyframes text_green__yellow {
+    0%   { color: #75dd7b; }
+    50%  { color: #dd8   ; }
+    100% { color: #75dd7b; }
 }
 
 /*------------*/
@@ -53,7 +50,7 @@
 /*------------*/
 a {
     animation: text_green__yellow 10s infinite;
-    color: #75dd7b;
+/*     color: #75dd7b; */
 }
 
 a:hover {

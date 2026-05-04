@@ -1,17 +1,23 @@
 @-moz-document url-prefix("https://stepik.org") {
+/*---------------------------*/
+/* standart color stepik.org */
+/*---------------------------*/
+/* #A5A5A5 - цвет текста navbar(a)*/
+
+
+/*---------------------------------------------*/
 /*------------*/
 /* animations */
 /*------------*/
-
 @keyframes text-rainbow-color {
-    8% { color: red; }
+    8%   { color: red               ; }
     16%  { color: orange            ; }
     24%  { color: yellow            ; }
     32%  { color: rgb(9, 255, 0)    ; }
     40%  { color: #00ffc8           ; }
-    48%  { color: rgb(53, 83, 250)  ; }
+    48%  { color: rgb(20, 114, 255) ; }
     56%  { color: violet            ; }
-    64%  { color: rgb(0, 38, 255)   ; }
+    64%  { color: rgb(20, 114, 255) ; }
     72%  { color: #00ffc8           ; }
     80%  { color: rgb(9, 255, 0)    ; }
     88%  { color: yellow            ; }
@@ -31,68 +37,36 @@
 /* tags style */
 /*------------*/
 
-body {
-    background-color: #2e2e2e;
-}
+body{   
+    background-color: #2e2e2e; }
 
-a {
-    color: #75dd7b;
-    transition: color 0.5s;
-}
+a       {color: #75dd7b     ;
+        transition: color 0.5s; }
 
-a:hover {
-    color: #0095ff;
-}
+a:hover { color: #0095ff    ; }
 
-h1 {
-    color: #fff;
-}
+h1      { color: #fff       ; }
+    
+h2      { color: #fff       ; }
+    
+h3      { color: #bcf0b3    ; }
+    
+b       { color: white      ; }
+    /*b стили возле галочек*/ 
 
-h2 {
-    color: #fff;
-}
+time    { color: #27929A    ; }
 
-h3 {
-    color: #bcf0b3;
-}
-
-b {
-    /*стили возле галочек*/
-    color: white;
-}
-
-time {
-    color: #27929A;
-}
-
-label>span {
+label>span{
     /*текст возле галочек*/
-    color: white;
-}
+    color: white; }
 
 
-/*---------------*/
-/* all in navbar */
-/*---------------*/
 
-.navbar {
-/* навбар */
-    background-color: #222222;
-    /*сверху стандартный цвет панели степика */
-}
 
 /*---------------------------------------------*/
-input.search-form__input {
-    background-color: #333333 !important;
-    border-color: #333333 !important;
-    animation: text-rainbow-color 16s infinite;   
-    color: #ff3434 ;
-    transition: all 2s !important;
-}
-
-input.search-form__input:focus {
-    border-color: #2d2d2d !important;
-}
+/*---------------------*/
+/* main window content */
+/*---------------------*/
 
 .main-content {
     /*главное окно с контентом*/
@@ -100,6 +74,48 @@ input.search-form__input:focus {
 }
 
 
+
+
+
+/*---------------------------------------------*/
+/*---------------*/
+/* all in navbar */
+/*---------------*/
+
+navbar>.navbar {
+/* навбар */
+    background-color: #222222;
+    /*сверху стандартный цвет панели степика */}
+
+
+
+
+/*---------------------------------------------*/
+/*---------------*/
+/*  style input  */
+/*---------------*/
+input.search-form__input {
+    background-color: #333333 !important;
+    border-color: #333333 !important;
+    animation: text-rainbow-color 22s infinite;   
+    color: #ff3434;
+    transition: all 2s !important;
+}
+
+
+st-input-wrapper{
+/*     background-color: red; */
+}
+
+/*---------------------------------------------*/
+/*------------------*/
+/*  style checkbox  */
+/*------------------*/
+.form-checkbox>span::after {
+    content: "w";
+    border-color: white !important;}
+
+/*---------------------------------------------*/
 .ember-application {
     background-color: #2e2e2e;
 }
@@ -112,10 +128,7 @@ stepik-loader-prerender-wrapper {
 
 @-moz-document url-prefix("https://stepik.org/catalog") {
 
-.form-checkbox>span::after {
-    content: "w";
-    border-color: white !important;
-}
+
 
 .form-checkbox>span::before {
     border-color: white !important;
@@ -220,7 +233,7 @@ button.select-box__toggle-btn {
 
 .search-form-filter__range-presets-btn {
     /* выпадающее окно "фильтры" (маленькие экраны),
-    /цена/кнопки снизу поля ввода(input(a))*/
+    >цена>кнопки снизу поля ввода(input(a))*/
     color: white !important;
     transition: all 1s !important;
 }
@@ -231,12 +244,19 @@ button.select-box__toggle-btn {
     background-color: #222222;
 }
 
+.catalog-block-promo-courses__about-card {
+/* блок с авторос месяца */
+    background-color: #222222;}
+
+.catalog-block-promo-courses__about-card-body {
+/* описание автора месяца */
+    color: #8f4bd4;}
+
 .catalog-block-organizations__list {
     /*каталог организаций публикующих курсы на степике */
     background-color: #bdbdbd;
     border-radius: 10px 40px 10px 40px;
-    padding: 1vh;
-}
+    padding: 1vh;}
 }
 
 @-moz-document url-prefix("https://stepik.org/users") {

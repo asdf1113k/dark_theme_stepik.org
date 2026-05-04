@@ -1,56 +1,43 @@
-@-moz-document url-prefix("https://stepik.org/catalog") {
+@-moz-document url-prefix("https://stepik.org") {
+/*------------*/
+/* animations */
+/*------------*/
+
 @keyframes text-rainbow-color {
-    8% {
-        color: red;
-    }
-    16% {
-        color: orange;
-    }
-    24% {
-        color: yellow;
-    }
-    32% {
-        color: rgb(9, 255, 0);
-    }
-    40% {
-        color: #00ffc8;
-    }
-    48% {
-        color: rgb(53, 83, 250);
-    }
-    56% {
-        color: violet;
-    }
-    /* 64%{ color: rgb(0, 38, 255)  ; } */
-    72% {
-        color: #00ffc8;
-    }
-    80% {
-        color: rgb(9, 255, 0);
-    }
-    88% {
-        color: yellow;
-    }
-    96% {
-        color: orange;
-    }
-    100% {
-        color: red;
-    }
+    8% { color: red; }
+    16%  { color: orange            ; }
+    24%  { color: yellow            ; }
+    32%  { color: rgb(9, 255, 0)    ; }
+    40%  { color: #00ffc8           ; }
+    48%  { color: rgb(53, 83, 250)  ; }
+    56%  { color: violet            ; }
+    64%  { color: rgb(0, 38, 255)   ; }
+    72%  { color: #00ffc8           ; }
+    80%  { color: rgb(9, 255, 0)    ; }
+    88%  { color: yellow            ; }
+    96%  { color: orange            ; }
+    100% { color: red               ; }
 }
 
 @keyframes text_green__yellow {
-    0%   { color: #75dd7b; }
-    50%  { color: #dd8   ; }
-    100% { color: #75dd7b; }
+    0%   { color: #75dd7b           ; }
+    50%  { color: #dd8              ; }
+    100% { color: #75dd7b           ; }
 }
+
+
 
 /*------------*/
 /* tags style */
 /*------------*/
+
+body {
+    background-color: #2e2e2e;
+}
+
 a {
-    animation: text_green__yellow 10s infinite;
-/*     color: #75dd7b; */
+    color: #75dd7b;
+    transition: color 0.5s;
 }
 
 a:hover {
@@ -65,19 +52,65 @@ h2 {
     color: #fff;
 }
 
+h3 {
+    color: #bcf0b3;
+}
+
+b {
+    /*стили возле галочек*/
+    color: white;
+}
+
+time {
+    color: #27929A;
+}
+
 label>span {
     /*текст возле галочек*/
     color: white;
 }
 
+
 /*---------------*/
-/* classes style */
+/* all in navbar */
 /*---------------*/
+
 .navbar {
-    /*по названию класса понятно что это навбар*/
+/* навбар */
     background-color: #222222;
     /*сверху стандартный цвет панели степика */
 }
+
+/*---------------------------------------------*/
+input.search-form__input {
+    background-color: #333333 !important;
+    border-color: #333333 !important;
+    animation: text-rainbow-color 16s infinite;   
+    color: #ff3434 ;
+    transition: all 2s !important;
+}
+
+input.search-form__input:focus {
+    border-color: #2d2d2d !important;
+}
+
+.main-content {
+    /*главное окно с контентом*/
+    background-color: #2e2e2e;
+}
+
+
+.ember-application {
+    background-color: #2e2e2e;
+}
+
+
+stepik-loader-prerender-wrapper {
+    background-color: #2e2e2e;
+}
+}
+
+@-moz-document url-prefix("https://stepik.org/catalog") {
 
 .form-checkbox>span::after {
     content: "w";
@@ -207,56 +240,9 @@ button.select-box__toggle-btn {
 }
 
 @-moz-document url-prefix("https://stepik.org/users") {
-/*------------*/
-/* tags style */
-/*------------*/
-body {
-    color: white;
-}
-
-a {
-    color: #19b005;
-}
-
-a:hover {
-    color: #0095ff;
-}
-
-b {
-    color: red;
-}
-
-h1 {
-    color: white;
-}
-
-h2 {
-    color: white;
-}
-
-h3 {
-    color: #bcf0b3;
-}
-
-time {
-    color: #27929A;
-}
-
-b {
-    /*     стили возле галочек */
-    color: white;
-}
-
-
 /*---------------*/
 /* classes style */
 /*---------------*/
-.navbar {
-    /*по названию класса понятно что это навбар*/
-    background-color: #222222;
-    /*сверху стандартный цвет панели степика */
-}
-
 
 .search-form {
     /*стили поисковой панели*/
@@ -346,55 +332,9 @@ rect {
 }
 
 @-moz-document url-prefix("https://stepik.org/learn") {
-/*------------*/
-/* tags style */
-/*------------*/
-body {
-    color: white;
-}
-
-a {
-    color: #19b005;
-}
-
-a:hover {
-    color: #0095ff;
-}
-
-b {
-    color: red;
-}
-
-h1 {
-    color: white;
-}
-
-h2 {
-    color: white;
-}
-
-h3 {
-    color: #bcf0b3;
-}
-
-time {
-    color: #27929A;
-}
-
-b {
-    /*стили возле галочек*/
-    color: white;
-}
-
-
 /*---------------*/
 /* classes style */
 /*---------------*/
-.navbar {
-    /*по названию класса понятно что это навбар*/
-    background-color: #222222;
-    /*сверху стандартный цвет панели степика */
-}
 
 .search-form {
     /*стили поисковой панели*/
@@ -470,42 +410,5 @@ button:not(.st-button_style_none) {
 rect {
     background-color: black;
     color: red !important;
-}
-}
-
-@-moz-document url-prefix("https://stepik.org") {
-* {
-    /*         background-color: #2e2e2e !important;  */
-}
-
-body {
-    background-color: #2e2e2e;
-}
-
-input {
-    background-color: #333333 !important;
-    border-color: #333333 !important;
-    color: #dd8 !important;
-    transition: all 2s !important;
-}
-
-input:focus {
-    border-color: #2d2d2d !important;
-    color: #75dd7b !important;
-}
-
-.main-content {
-    /*главное окно с контентом*/
-    background-color: #2e2e2e;
-}
-
-
-.ember-application {
-    background-color: #2e2e2e;
-}
-
-
-stepik-loader-prerender-wrapper {
-    background-color: #2e2e2e;
 }
 }

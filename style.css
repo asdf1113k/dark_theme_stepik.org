@@ -112,8 +112,24 @@ input.search-form__input {
 
 
 st-input-wrapper{
-/*     background-color: red; */
+        background-color: red;
 }
+
+
+
+
+/*---------------------------------------------*/
+/*----------*/
+/*  search  */
+/*----------*/
+
+.search-form {
+    /*стили поисковой панели*/
+    background-color: #222222;
+}
+
+
+
 
 /*---------------------------------------------*/
 /*------------------*/
@@ -123,7 +139,12 @@ st-input-wrapper{
     content: "w";
     border-color: white !important;}
 
+.form-checkbox>span::before {
+    border-color: white !important;}
+
+
 /*---------------------------------------------*/
+
 .ember-application {
     background-color: #2e2e2e;
 }
@@ -132,6 +153,7 @@ st-input-wrapper{
 stepik-loader-prerender-wrapper {
     background-color: #2e2e2e;
 }
+<<<<<<< HEAD
 }
 
 @-moz-document url-prefix("https://stepik.org/catalog") {
@@ -262,6 +284,13 @@ button.select-box__toggle-btn {
     background-color: #bdbdbd;
     border-radius: 10px 40px 10px 40px;
     padding: 1vh;}
+=======
+
+
+
+/* не опредеоённое */
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+>>>>>>> fdb375516b656de2527a91416d9c39aba8ae814a
 }
 
 @-moz-document url-prefix("https://stepik.org/users") {
@@ -269,13 +298,11 @@ button.select-box__toggle-btn {
 /* classes style */
 /*---------------*/
 
-.search-form {
-    /*стили поисковой панели*/
-    background-color: #222222;
-}
+
 
 .toast-panel {
-    /* стили панели с кнопкой в "Выйти из режима просмотра" */
+    /* режим просмотра своего провиля "со стороны" */
+    /* стили панели с кнопкой "Выйти из режима просмотра" */
     background-color: #222222;
     color: yellow;
 }
@@ -361,10 +388,6 @@ rect {
 /* classes style */
 /*---------------*/
 
-.search-form {
-    /*стили поисковой панели*/
-    background-color: #222222;
-}
 
 .profile-summary__followers {
     color: #ff1818;
@@ -392,24 +415,11 @@ rect {
 }
 
 
-.tab__item {
-    /*вкладки с инфой*/
-    color: white;
-}
-
-.toast-panel {
-    background-color: #222222;
-    color: yellow;
-}
-
 .toast-panel__button {
     background-color: #222222;
     color: red;
 }
 
-.white {
-    color: red;
-}
 
 
 .button:not(.st-button_style_none).grey.disabled,

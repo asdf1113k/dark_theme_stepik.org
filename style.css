@@ -3,6 +3,7 @@
 /* standart color stepik.org */
 /*---------------------------*/
 /* #A5A5A5 - цвет текста navbar(a)*/
+/* #222222 - цвет навбара */
 
 
 /*---------------------------------------------*/
@@ -10,27 +11,19 @@
 /* animations */
 /*------------*/
 @keyframes text-rainbow-color {
-    8%   { color: red               ; }
-    16%  { color: orange            ; }
-    24%  { color: yellow            ; }
-    32%  { color: rgb(9, 255, 0)    ; }
-    40%  { color: #00ffc8           ; }
-    48%  { color: rgb(20, 114, 255) ; }
-    56%  { color: violet            ; }
-    64%  { color: rgb(20, 114, 255) ; }
-    72%  { color: #00ffc8           ; }
-    80%  { color: rgb(9, 255, 0)    ; }
-    88%  { color: yellow            ; }
-    96%  { color: orange            ; }
-    100% { color: red               ; }
+    8%, 100%  { color: red               ; }
+    16%, 96%  { color: orange            ; }
+    24%, 88%  { color: yellow            ; }
+    32%, 80%  { color: rgb(9, 255, 0)    ; }
+    40%, 72%  { color: #00ffc8           ; }
+    48%, 64%  { color: rgb(20, 114, 255) ; }
+    56%       { color: violet            ; }
 }
 
 @keyframes text_green__yellow {
-    0%   { color: #75dd7b           ; }
-    50%  { color: #dd8              ; }
-    100% { color: #75dd7b           ; }
+    0%, 100% { color: #75dd7b           ; }
+    50%      { color: #dd8              ; }
 }
-
 
 
 /*---------------------------------------------*/

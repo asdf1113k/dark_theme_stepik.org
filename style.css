@@ -11,13 +11,13 @@
 /* animations */
 /*------------*/
 @keyframes text-rainbow-color {
-    8%, 100%  { color: red               ; }
-    16%, 96%  { color: orange            ; }
-    24%, 88%  { color: yellow            ; }
-    32%, 80%  { color: rgb(9, 255, 0)    ; }
-    40%, 72%  { color: #00ffc8           ; }
-    48%, 64%  { color: rgb(20, 114, 255) ; }
-    56%       { color: violet            ; }
+    8%, 100% { color: red               ; }
+    16%, 96% { color: orange            ; }
+    24%, 88% { color: yellow            ; }
+    32%, 80% { color: rgb(9, 255, 0)    ; }
+    40%, 72% { color: #00ffc8           ; }
+    48%, 64% { color: rgb(20, 114, 255) ; }
+    56%      { color: violet            ; }
 }
 
 @keyframes text_green__yellow {
@@ -30,64 +30,88 @@
 /*------------------------*/
 /* общий background-color */
 /*------------------------*/
-body{
-background-color: #2e2e2e; }
-
-
-
-
-
-
-/*---------------------------------------------*/
-/*------------*/
-/* tags style */
-/*------------*/
-
-a       {color: #75dd7b     ;
-        transition: color 0.5s; }
-
-a:hover { color: #0095ff    ; }
-
-h1,h2   { color: #fff       ; }
-
-h3      { color: #bcf0b3    ; }
-
-b       { color: white      ; }
-    /*b стили возле галочек*/ 
-
-time    { color: #27929A    ; }
-
-label>span{
-    /*текст возле галочек*/
-    color: white; }
-
-
-
-
-/*---------------------------------------------*/
-/*---------------------*/
-/* main window content */
-/*---------------------*/
-
+body,
 .main-content {
-    /*главное окно с контентом*/
     background-color: #2e2e2e;
+    /* .main-content - главное окно с контентом*/
+}
+
+.catalog-w__content-header-toolbar,
+.navbar,
+.course-cards__card,
+.catalog-rich-card::before,
+.search-form {
+    background-color: #222222;
+    /* .catalog-w__content-header-toolbar - поисковая строка. после нажатия на кнопку поиск */
+    /* .course-cards__card - в главной этот класс лежит как подстилка, а после нажатия кнопки поиска становится лицом карточки курса */
 }
 
 
 
 
-
 /*---------------------------------------------*/
-/*---------------*/
-/* all in navbar */
-/*---------------*/
+/*------------*/
+/* color     */
+/*------------*/
 
-navbar>.navbar {
-/* навбар */
-    background-color: #222222;
-    /*сверху стандартный цвет панели степика */}
+a {
+    color: #75dd7b;
+    transition: color 0.5s;
+}
 
+a:hover {
+    color: #0095ff;
+}
+
+h1,
+h2,
+b,
+/*стили возле галочек(правда я уже не помню каких именно галочек)*/
+label>span,
+/*текст возле галочек*/
+.tab__item,
+/*категории(вкладки с инфой)*/
+.course-card__summary,
+/* краткое описание курса после нажатия на кнопку поиска, (большие экраны) */
+.search-form-filter__title,
+/*  левый фильтр после нажатия кнопки поиск (большие экраны)
+    выпадающее окно "фильтры" (маленькие экраны)
+    звголовки(title)*/
+.modal-popup__subtitle,
+/* перевод: модуль-всплывающий__субтитры */
+/* выпадающее окно "фильтры"(маленькие экраны),
+текст в "Уровень сложности",
+в "Язык" и "Тип обучения" */
+.search-form-filter__range-presets-btn,
+/* выпадающее окно "фильтры" (маленькие экраны),
+    >цена>кнопки снизу поля ввода(input(a))*/
+.button:not(.st-button_style_none).toast-panel__button.st-size-small,
+button:not(.st-button_style_none).toast-panel__button.st-size-small,
+/* кнопка на панели(но что за панель я забыл указать а теперь догадывайся сам) */
+.profile__counter>b,
+/*счётчик профиля, репутация и знания(цвет чисел)*/
+.profile__text,
+/* биография юзера */
+.button:not(.st-button_style_none).grey.disabled,
+.button:not(.st-button_style_none).grey[aria-disabled=true],
+.button:not(.st-button_style_none).grey[disabled],
+button:not(.st-button_style_none).grey.disabled,
+button:not(.st-button_style_none).grey[aria-disabled=true],
+button:not(.st-button_style_none).grey[disabled],
+/* кнопка подписатся в предпросмотре своего профиля*/
+.button:not(.st-button_style_none),
+button:not(.st-button_style_none)
+/* кнопка подписатся в предпросмотре чужих профилях */
+    {
+    color: #fff !important;}
+
+h3 {
+    color: #bcf0b3;
+}
+
+time {
+    color: #27929A !important;
+}
 
 
 
@@ -98,32 +122,24 @@ navbar>.navbar {
 input.search-form__input {
     background-color: #333333 !important;
     border-color: #333333 !important;
-    animation: text-rainbow-color 22s infinite;   
+    animation: text-rainbow-color 22s infinite;
     color: #ff3434;
     transition: all 2s !important;
 }
 
 
-st-input-wrapper{
-/*     background-color: red; */
-        background-color: red;
+st-input-wrapper {
+    /*     background-color: red; */
+    background-color: red;
 }
 
 
 
-
-/*---------------------------------------------*/
-/*----------*/
-/*  search  */
-/*----------*/
-
-.search-form {
-    /*стили поисковой панели*/
-    background-color: #222222;
+.catalog-w__content-header-toolbar {
+    /* поисковая строка. после нажатия на кнопку поиск */
+    border: 1vh #222222 solid;
+    border-radius: 14px;
 }
-
-
-
 
 /*---------------------------------------------*/
 /*------------------*/
@@ -131,10 +147,12 @@ st-input-wrapper{
 /*------------------*/
 .form-checkbox>span::after {
     content: "w";
-    border-color: white !important;}
+    border-color: white !important;
+}
 
 .form-checkbox>span::before {
-    border-color: white !important;}
+    border-color: white !important;
+}
 
 
 /*---------------------------------------------*/
@@ -144,27 +162,12 @@ st-input-wrapper{
 }
 
 
-stepik-loader-prerender-wrapper {
+.stepik-loader-prerender-wrapper {
     background-color: #2e2e2e;
 }
-
 }
 
-@-moz-document url-prefix("https://stepik.org/catalog") {
-.form-checkbox>span::before {
-    border-color: white !important;
-}
 
-.tab__item {
-    /*категории*/
-    color: white;
-}
-
-.course-card__summary {
-    /* краткое описание курса после нажатия на кнопку поиска,
-    (большие экраны) */
-    color: white;
-}
 
 .course-card__widgets {
     /*карточка с курсом > 
@@ -178,20 +181,19 @@ stepik-loader-prerender-wrapper {
     /* before в этих стилях значит для этого класса только на главной, а без before после нажатия кнопки поиска */
     /* карта курса */
     content: "стили от twitch.tv/typeerr0r";
-    background-color: #222222;
     transition: all 0.2s;
 }
 
-.course-cards__item {
-    /* ячейка в которой хранятся карточки курсов */
-}
+/* .course-cards__item { */
+/* ячейка в которой хранятся карточки курсов */
+/* } */
 
 .course-cards__card {
     /*  в главной этот класс лежит как подстилка
     а после нажатия кнопки поиска становится лицом 
-    карточки курса  */
-    background-color: #222222;
-    margin: 1vh;
+    карточки курса */
+    border-radius: 15px;
+    /* margin: 25px; */
     padding: 1vh !important;
 }
 
@@ -223,13 +225,6 @@ button.select-box__toggle-btn {
     background-color: #222222;
 }
 
-.search-form-filter__title {
-    /*  левый фильтр после нажатия кнопки поиск (большие экраны)
-    выпадающее окно "фильтры" (маленькие экраны)
-    звголовки(title)*/
-    color: white !important;
-}
-
 
 .search-form-filter__subtitle-mobile {
     /* выпадающее окно "фильтры" (маленькие экраны)
@@ -244,18 +239,11 @@ button.select-box__toggle-btn {
     background-color: #222222;
 }
 
-.modal-popup__subtitle {
-    /* перевод: модуль-всплывающий__субтитры */
-    /* выпадающее окно "фильтры" (маленькие экраны),
-    в "Уровень сложности",
-    в "Язык" и "Тип обучения"*/
-    color: white;
-}
+
 
 .search-form-filter__range-presets-btn {
     /* выпадающее окно "фильтры" (маленькие экраны),
     >цена>кнопки снизу поля ввода(input(a))*/
-    color: white !important;
     transition: all 1s !important;
 }
 
@@ -266,27 +254,29 @@ button.select-box__toggle-btn {
 }
 
 .catalog-block-promo-courses__about-card {
-/* блок с авторос месяца */
-    background-color: #222222;}
+    /* блок с авторос месяца */
+    background-color: #222222;
+}
 
 .catalog-block-promo-courses__about-card-body {
-/* описание автора месяца */
-    color: #8f4bd4;}
+    /* описание автора месяца */
+    color: #8f4bd4;
+}
 
 .catalog-block-organizations__list {
     /*каталог организаций публикующих курсы на степике */
     background-color: #bdbdbd;
     border-radius: 10px 40px 10px 40px;
-    padding: 1vh;}
+    padding: 1vh;
+}
 
 
 
 
 /* не опредеоённое */
 /* ----------------------------------------------------------------------------------------------------------- */
-}
 
-@-moz-document url-prefix("https://stepik.org/users") {
+
 /*---------------*/
 /* classes style */
 /*---------------*/
@@ -307,9 +297,8 @@ button.select-box__toggle-btn {
 
 .button:not(.st-button_style_none).toast-panel__button.st-size-small,
 button:not(.st-button_style_none).toast-panel__button.st-size-small {
-    /* кнопка на панели */
+    /* кнопка на панели(но что за панель я забыл указать а теперь догадывайся сам) */
     background-color: #2e2e2e;
-    color: white;
 }
 
 
@@ -327,25 +316,16 @@ button:not(.st-button_style_none).toast-panel__button.st-size-small {
     /* текст счётчика провиля */
     color: yellow;
 }
-.profile__counter>b {
-    /* счётчик профиля(числа) */
-    color: white;
-}
+
+
 
 
 
 .profile__text {
-    /* стили инфы о профиле */
-    color: white;
+    /* биография юзера */
     background-color: #222222;
     padding: 1vh;
     border-radius: 14px;
-}
-
-
-.tab__item {
-    /*вкладки с инфой*/
-    color: white;
 }
 
 
@@ -361,9 +341,7 @@ button:not(.st-button_style_none).toast-panel__button.st-size-small {
 button:not(.st-button_style_none).grey.disabled,
 button:not(.st-button_style_none).grey[aria-disabled=true],
 button:not(.st-button_style_none).grey[disabled] {
-    /*     коммент от разраба, в душе не ебу аочему такая длиная запись класса для определения цвета */
     /* кнопка подписатся в предпросмотре своего профиля*/
-    color: white;
     background-color: #970707;
 }
 
@@ -371,7 +349,6 @@ button:not(.st-button_style_none).grey[disabled] {
 .button:not(.st-button_style_none),
 button:not(.st-button_style_none) {
     /* кнопка подписатся в предпросмотре чужих профилях */
-    color: white;
     background-color: #970707;
 }
 
@@ -379,9 +356,9 @@ rect {
     background-color: black;
     color: red !important;
 }
-}
 
-@-moz-document url-prefix("https://stepik.org/learn") {
+
+
 /*---------------*/
 /* classes style */
 /*---------------*/
@@ -404,23 +381,9 @@ rect {
     /* текст счётчика провиля */
     color: yellow;
 }
-.profile__counter>b {
-    /* счётчик профиля(числа) */
-    color: white;
-}
-
-.profile__text {
-    color: white;
-    background-color: #222222;
-    padding: 1vh;
-    border-radius: 14px;
-}
 
 
-.tab__item {
-    /*вкладки с инфой*/
-    color: white;
-}
+
 
 .toast-panel {
     background-color: #222222;
@@ -432,33 +395,9 @@ rect {
     color: red;
 }
 
-.white {
-    color: red;
-}
 
-
-.button:not(.st-button_style_none).grey.disabled,
-.button:not(.st-button_style_none).grey[aria-disabled=true],
-.button:not(.st-button_style_none).grey[disabled],
-button:not(.st-button_style_none).grey.disabled,
-button:not(.st-button_style_none).grey[aria-disabled=true],
-button:not(.st-button_style_none).grey[disabled] {
-    /*     коммент от разраба, в душе не ебу аочему такая длиная запись класса для определения цвета */
-    /* кнопка подписатся в предпросмотре своего профиля*/
-    color: white;
-    background-color: #970707;
-}
-
-
-.button:not(.st-button_style_none),
-button:not(.st-button_style_none) {
-    /* кнопка подписатся в предпросмотре чужих профилях */
-    color: white;
-    background-color: #970707;
-}
 
 rect {
     background-color: black;
     color: red !important;
-}
 }

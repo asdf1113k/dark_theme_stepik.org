@@ -1,9 +1,4 @@
 @-moz-document url-prefix("https://stepik.org") {
-
-/* *{background-color: #222222;
-background-image: none;} */
-
-
 @keyframes text-rainbow-color {
     8%, 100% { color: red               ; }
     16%, 96% { color: orange            ; }
@@ -41,6 +36,7 @@ input.search-form__input, /* поисковая строка на главной
 в нём не чего не хранится  */{
     background-color: #2e2e2e !important;
     --marco-layout-outer-color: #222222;
+    /* это цвет нечего не содержащих блоков по блокам */
 
 }
 
@@ -66,7 +62,9 @@ input.search-form__input, /* поисковая строка на главной
 .button:not(.st-button_style_none).grey[disabled],
 button:not(.st-button_style_none).grey.disabled,
 button:not(.st-button_style_none).grey[aria-disabled=true],
-button:not(.st-button_style_none).grey[disabled] /* все элементы с #222222 */ {
+button:not(.st-button_style_none).grey[disabled], /* все элементы с #222222 */ 
+input[type=text].new-course-form__input /* поле ввода названия нового курса */
+{
     background-color: #222222 !important;
     background-image: none;
 }
@@ -83,7 +81,7 @@ a:hover {
     color: #0095ff;
 }
 
-h1, h2,
+h1, h2, p,
 b, /* стили возле галочек */
 label>span, /* текст возле галочек */
 .tab__item, /* категории (вкладки с инфой) */
@@ -91,6 +89,7 @@ label>span, /* текст возле галочек */
 .search-form-filter__title, /* левый фильтр после поиска (большие экраны), заголовки фильтров */
 .modal-popup__subtitle, /* текст в "Уровень сложности", "Язык", "Тип обучения" */
 .search-form-filter__range-presets-btn, /* кнопки цены в фильтрах */
+.navbar__search-wrapper .st-input-wrapper, /* поле поиска в навбаре */
 .learn-featured-course-card, /*последний проходимый курс на вкладке моё обучение*/
 .learn-last-activity-card, /* блок с надписью "дней без перерыва" */
 .button:not(.st-button_style_none).toast-panel__button.st-size-small,
@@ -110,6 +109,12 @@ time {
     color: #27929A !important;
 }
 
+.main-content>.marco-layout, /* текст под кнопкой создать курс в вкладке преподавание  */
+.new-course-form__label /* текст возле поля ввода "название курса" */
+{    
+    color: #bdbdbd;
+}
+
 /*---------------*/
 /* style input   */
 /*---------------*/
@@ -125,6 +130,19 @@ input.search-form__input {
     border: 1vh #222222 solid;
     border-radius: 14px;
 }
+
+input[type=text].new-course-form__input /* поле ввода названия нового курса */
+{
+    border: 2px solid #75dd7b;
+    color: #75dd7b;
+    transition: color 0.2s;
+}
+
+input[type=text].new-course-form__input:hover
+{
+    color: #0095ff;
+}
+
 
 /*------------------*/
 /* style checkbox   */
@@ -148,6 +166,17 @@ input.search-form__input {
     padding: 1vh !important;
     margin: 1vh;
 }
+
+button.course-card__bookmark:not(.st-button_style_none) {
+    /* кнопка "хочу пройти" в правом углу курса */
+    border: none;
+    background-color: red;
+}
+button.course-card__bookmark:not(.st-button_style_none):hover {
+    background-color: red;
+    border: none;
+}
+
 
 button.select-box__toggle-btn {
     /* выбор языка */
@@ -173,6 +202,12 @@ button.select-box__toggle-btn {
     /* текст счётчика профиля на вкладке профиль */
     color: yellow;
 }
+
+.licl__progress {
+    /* прогрес прохождения курса (100/100) */
+    color: #737370 !important;
+}
+
 
 .toast-panel {
     /* панель "Выйти из режима просмотра" профиля */
@@ -200,6 +235,7 @@ button.select-box__toggle-btn {
     сам текст*/
     animation: text-rainbow-color 22s infinite;
     color: red;
-}
 
+    
+}
 }

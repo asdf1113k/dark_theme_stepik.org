@@ -31,6 +31,7 @@ input.search-form__input, /* поисковая строка на главной
 .profile__text,
 .light-tabs__content,
 .toast-panel__button,
+.lesson-modern .lesson__player, /* бэк на курсах, где хранится основной текст курса */
 /* все элементы с #2e2e2e или #222222 */ 
 .marco-layout /* боковой цвет при очень больших экранах 
 в нём не чего не хранится  */{
@@ -39,7 +40,8 @@ input.search-form__input, /* поисковая строка на главной
     /* это цвет нечего не содержащих блоков по блокам */
 
 }
-
+.lesson-modern__top-panel, /* оглавление на курсах снизу навбара(большие экраны) */
+pre>code, /* блоки c кодом */
 .learn-last-activity-card, /* блок с надписью "дней без перерыва" */
 .learn-featured-course-card, /*последний проходимый курс на вкладке моё обучение*/
 .nav-menu, /* боковое меню на вкладке моё обучение */
@@ -97,7 +99,9 @@ button:not(.st-button_style_none).toast-panel__button.st-size-small, /* кноп
 .profile__counter>b, /* счётчик профиля, репутация и знания (цвет чисел) */
 .profile__text, /* биография юзера */
 .button:not(.st-button_style_none),
-button:not(.st-button_style_none) /* кнопка подписаться в предпросмотре чужих профилей */ {
+button:not(.st-button_style_none), /* кнопка подписаться в предпросмотре чужих профилей */ 
+.lesson-modern__top-panel /* оглавление на курсах снизу навбара(большие экраны) */
+{
     color: #fff !important;
 }
 
